@@ -25,4 +25,6 @@ public class MVVMApplication extends Application implements HasActivityInjector 
     public DispatchingAndroidInjector<Activity> activityInjector() {
         return dispatchingAndroidInjector;
     }
+
 }
+

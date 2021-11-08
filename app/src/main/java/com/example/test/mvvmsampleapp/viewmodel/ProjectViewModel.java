@@ -15,9 +15,12 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Transformations;
 
+import retrofit2.Retrofit;
+
 public class ProjectViewModel extends AndroidViewModel {
     private static final String TAG = ProjectViewModel.class.getName();
     private static final MutableLiveData ABSENT = new MutableLiveData();
+
     {
         //noinspection unchecked
         ABSENT.setValue(null);
@@ -44,6 +47,8 @@ public class ProjectViewModel extends AndroidViewModel {
 
             return projectRepository.getProjectDetails("Google", projectID.getValue());
         });
+
+
     }
 
     public LiveData<Project> getObservableProject() {
@@ -57,4 +62,5 @@ public class ProjectViewModel extends AndroidViewModel {
     public void setProjectID(String projectID) {
         this.projectID.setValue(projectID);
     }
+
 }

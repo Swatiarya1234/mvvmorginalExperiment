@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements HasSupportFragmen
 
     /** Shows the project detail fragment */
     public void show(Project project) {
+
         ProjectFragment projectFragment = ProjectFragment.forProject(project.name);
 
         getSupportFragmentManager()
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements HasSupportFragmen
                 .addToBackStack("project")
                 .replace(R.id.fragment_container,
                         projectFragment, null).commit();
+
     }
 
     @Override

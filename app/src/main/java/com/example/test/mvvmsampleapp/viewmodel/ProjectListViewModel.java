@@ -29,4 +29,6 @@ public class ProjectListViewModel extends AndroidViewModel {
     public LiveData<List<Project>> getProjectListObservable() {
         return projectListObservable;
     }
+
 }
+

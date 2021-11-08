@@ -20,8 +20,10 @@ public class AppInjector {
     private AppInjector() {}
 
     public static void init(MVVMApplication mvvmApplication) {
+
         DaggerAppComponent.builder().application(mvvmApplication)
                 .build().inject(mvvmApplication);
+
 
         mvvmApplication
                 .registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
@@ -75,9 +77,11 @@ public class AppInjector {
                                                               Bundle savedInstanceState) {
                                     if (fragment instanceof Injectable) {
                                         AndroidSupportInjection.inject(fragment);
-                                    }
-                                }
+                                    } }
                             }, true);
         }
+
+
+
     }
 }

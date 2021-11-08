@@ -13,7 +13,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module(subcomponents = ViewModelSubComponent.class)
 class AppModule {
-    @Singleton @Provides
+    @Singleton
+    @Provides
     GitHubService provideGithubService() {
         return new Retrofit.Builder()
                 .baseUrl(GitHubService.HTTPS_API_GITHUB_URL)

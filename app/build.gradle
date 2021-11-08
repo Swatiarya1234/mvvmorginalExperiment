@@ -52,6 +52,7 @@ dependencies {
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$project.arch"
     implementation "androidx.lifecycle:lifecycle-runtime:$project.arch"
     implementation "androidx.lifecycle:lifecycle-extensions:$project.arch"
+    
 
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$project.retrofit"
